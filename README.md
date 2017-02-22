@@ -30,7 +30,7 @@ To run the app, run `npm start`
 Run `npm test` to execute the unit tests via [AVA].
 
 ### CI
-Travis.yml is included with example settings that enables CI with [Travis](https://travis-ci.org/)
+Travis.yml is included with example settings that enables CI with [Travis](https://travis-ci.org/).
 
 ### TODO
 Live Reload
