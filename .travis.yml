@@ -19,7 +19,7 @@ before_script:
 test_script:
   - node --version
   - .\node_modules\.bin\npm --version
-  - npm package
+  - npm run package
   - npm test
 
 cache:
