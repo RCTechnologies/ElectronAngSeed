@@ -1,5 +1,5 @@
 # Angular 2 - Electron seed
-A biolerplate for building cross platform desktop apps with [Electron](http://electron.atom.io/), [Angular 2](https://angular.io/) and the [Angular-CLI](https://github.com/angular/angular-cli).
+A biolerplate for building cross platform desktop apps with [Electron](http://electron.atom.io/) and [Angular 2](https://angular.io/).
 
 This project is based on electron-forge
 
