@@ -1,3 +1,4 @@
+// ------- Copy to Each test file
 import test from 'ava';
 import {Application} from 'spectron';
 
@@ -5,6 +6,10 @@ test.beforeEach(async t => {
     if(process.platform === "darwin"){
         t.context.app = new Application({
             path: './out/rct-groundcontrol-darwin-x64/rct-groundcontrol.app/Contents/MacOS/rct-groundcontrol'
+        });
+    }else if(process.platform === "win32"){
+        t.context.app = new Application({
+            path: './out/rct-groundcontrol-win-32/rct-groundcontrol.exe'
         });
     }else{
         t.context.app = new Application({
@@ -18,6 +23,8 @@ test.beforeEach(async t => {
 test.afterEach.always(async t => {
     await t.context.app.stop();
 });
+
+// -------- Copy
 
 test(async t => {
     const app = t.context.app;
