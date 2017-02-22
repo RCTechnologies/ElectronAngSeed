@@ -3,8 +3,10 @@ import {Application} from 'spectron';
 
 test.beforeEach(t => {
     t.context.app = new Application({
-        path: './out/rct-groundcontrol-linux-x64/rct-groundcontrol'
+        path: './out/rct-groundcontrol-linux-x6/rct-groundcontrol'
+        // './out/rct-groundcontrol-darwin-x64/rct-groundcontrol.app/Contents/MacOS/rct-groundcontrol'
     });
+
 
 
     return t.context.app.start();
