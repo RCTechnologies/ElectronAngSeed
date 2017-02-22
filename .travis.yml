@@ -19,7 +19,7 @@ before_script:
 test_script:
   ##- node --version
   ##- .\node_modules\.bin\npm --version
-  - npm run test:mocha
+  - npm run test
 
 cache:
   directories:
