@@ -10,7 +10,8 @@
     "make": "electron-forge make",
     "lint": "tslint src",
     "test:e2e": "karma start --single-run",
-    "test": "mocha tests/*.js"
+    "test:mocha": "mocha tests/*.js",
+    "test": "ava"
   },
   "keywords": [],
   "author": "Skroget",
@@ -58,6 +59,7 @@
     "zone.js": "^0.7.7"
   },
   "devDependencies": {
+    "ava": "^0.18.2",
     "babel-plugin-transform-async-to-generator": "^6.22.0",
     "babel-preset-env": "^1.1.8",
     "babel-preset-react": "^6.23.0",
