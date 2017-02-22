@@ -16,6 +16,12 @@ before_script:
   - "sh -e /etc/init.d/xvfb start"
   - sleep 3 # give xvfb some time to start
 
+test_script:
+  - node --version
+  - .\node_modules\.bin\npm --version
+  - npm package
+  - npm test
+
 cache:
   directories:
     - node_modules
