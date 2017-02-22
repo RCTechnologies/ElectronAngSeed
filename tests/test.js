@@ -23,7 +23,6 @@ global.before(function () {
 
 describe('Test Example', function () {
     beforeEach(function () {
-        //console.log("test")
         return app.start();
     });
 
