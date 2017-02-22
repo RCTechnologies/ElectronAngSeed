@@ -7,8 +7,8 @@
   "scripts": {
     "start": "electron-forge start",
     "package:mac": "electron-forge package",
-    "package:linux": "electron-forge package --platform=linux --arch=x64",
-    "package:linux": "electron-forge package --platform=windows --arch=x64",
+    "package:linux": "electron-forge package --platform=linux --arch=amd64",
+    "package:windows": "electron-forge package --platform=windows --arch=x64",
     "make": "electron-forge make",
     "lint": "tslint src",
     "test:e2e": "karma start --single-run",
