@@ -24,6 +24,13 @@ script:
 test_script:
   - npm test
 
+on_success:
+  - git fetch --all --prune
+  - git checkout master
+  - git pull origin $TRAVIS_BRANCH
+  - git merge $TRAVIS_BRANCH
+  - git push origin master
+
 cache:
   directories:
     - node_modules
