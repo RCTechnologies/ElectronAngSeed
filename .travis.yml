@@ -22,12 +22,14 @@ before_script:
 test_script:
   - npm test
 
-on_success:
+after_success:
+$(if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
   - git fetch --all --prune
   - git checkout master
   - git pull origin $TRAVIS_BRANCH
   - git merge $TRAVIS_BRANCH
   - git push origin master
+  else echo Was PULLREQUEST; fi)
 
 cache:
   directories:
