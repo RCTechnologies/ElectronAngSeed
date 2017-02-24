@@ -28,8 +28,11 @@ test_script:
 
 after_success:
 - if [ "$BRANCH" != "master" ]; then
-  git clone "https://github.com/RCTechnologies/Seed.git" $repo_temp;
-  cd $repo_temp;
+  git clone "https://github.com/RCTechnologies/Seed.git" repo_temp;
+  cd repo_temp;
+
+  echo ls;
+  ls;
 
   echo Checkout;
   git checkout "master";
