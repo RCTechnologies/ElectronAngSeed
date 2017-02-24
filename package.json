@@ -79,6 +79,7 @@
     "protractor": "~5.1.0",
     "requirejs": "^2.3.3",
     "spectron": "^3.6.0",
+    "travis": "^0.1.1",
     "tslint": "^4.4.2",
     "typescript": "^2.1.6"
   }
