@@ -39,7 +39,7 @@ after_success:
   git merge --ff-only "$TRAVIS_BRANCH";
 
   echo Pushing;
-  git push;
+  git push https://$GH_TOKEN@github.com/RCTechnologies/Seed : master;
 
   else echo Was PULLREQUEST or directly on master; fi
 
