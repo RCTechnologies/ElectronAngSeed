@@ -13,8 +13,12 @@
     "lint": "tslint src",
     "//": "mocha mochat.js",
     "//": "karma start --single-run",
-    "test": "ava test.js"
-
+    "test": "ava test.js",
+    "watch": "npm-watch"
+  },
+  "watch": {
+    "test": "src/**/*.*",
+    "start": "src/**/*.*"
   },
   "keywords": [],
   "author": "Skroget",
@@ -72,6 +76,7 @@
     "electron-packager": "^8.5.2",
     "electron-prebuilt-compile": "1.4.15",
     "mocha": "^3.2.0",
+    "npm-watch": "^0.1.8",
     "protractor": "~5.1.0",
     "requirejs": "^2.3.3",
     "spectron": "^3.6.0",
