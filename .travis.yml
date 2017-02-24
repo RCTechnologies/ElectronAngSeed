@@ -9,7 +9,7 @@ node_js:
 branches:
   only:
     - master
-    - /^ready/**/
+    - /^ready.*$/
 
 before_script:
   - "export DISPLAY=:99.0"
