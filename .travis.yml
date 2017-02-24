@@ -11,8 +11,6 @@ branches:
   only:
   - master
   - /^ready\/.*$/
-  - /^(?i:ready)-.*$/
-
 
 before_script:
 - export DISPLAY=:99.0
@@ -41,7 +39,7 @@ after_success:
   git merge --ff-only "$TRAVIS_BRANCH";
 
   echo Pushing;
-  push_uri="https://$GH_TOKEN@github.com/RCTechnologies/Seed";
+  git push;
 
   else echo Was PULLREQUEST or directly on master; fi
 
