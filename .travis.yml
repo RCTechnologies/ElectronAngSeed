@@ -32,8 +32,7 @@ after_success:
   echo ls;
   ls;
 
-  echo Checkout;
-  git checkout "master";
+  git pull "$TRAVIS_BRANCH"
 
   echo Mergin;
   git merge --ff-only "$TRAVIS_BRANCH";
