@@ -23,13 +23,14 @@ test_script:
   - npm test
 
 after_success:
-$(if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
-  - git fetch --all --prune
-  - git checkout master
-  - git pull origin $TRAVIS_BRANCH
-  - git merge $TRAVIS_BRANCH
-  - git push origin master
-  else echo Was PULLREQUEST; fi)
+  - 'if [ "$BRANCH" != "master" ]; then
+    git fetch --all --prune;
+    git checkout master;
+    git pull origin $BRANCH;
+    git merge $TRAVIS_BRANCH;
+    git push origin master;
+  else
+    echo Was PULLREQUEST; fi'
 
 cache:
   directories:
