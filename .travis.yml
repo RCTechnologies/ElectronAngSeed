@@ -33,10 +33,11 @@ after_success:
   ls;
 
   echo Mergin;
-  git merge --ff-only origin/"$TRAVIS_BRANCH";
+  git merge --ff-only origin/"$BRANCH";
 
   echo Pushing;
-  git push https://$GH_TOKEN@github.com/RCTechnologies/Seed master ;
+  git push https://$GH_TOKEN@github.com/"$TRAVIS_REPO_SLUG" master ;
+  git push https://$GH_TOKEN@github.com/"$TRAVIS_REPO_SLUG" --delete "$BRANCH"
 
   else echo Was PULLREQUEST or directly on master; fi
 
