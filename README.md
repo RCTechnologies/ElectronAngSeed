@@ -44,3 +44,4 @@ Pushing a branch mathching the pattern /^ready\/.*$/ (ready/*) will trigger [Tra
 Live Reload  
 E2E  
 Convert to Electron-Forge --template
+-Groom README
