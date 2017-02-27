@@ -41,5 +41,6 @@ Example CI is following a 'Branchy' approach(http://www.josra.org/blog/An-automa
 Pushing a branch mathching the pattern /^ready\/.*$/ (ready/*) will trigger [Travis] to build/test and if successful merge the feature branch with master and delete the feature branch.
 
 ### TODO
-Live Reload
-E2E
+Live Reload  
+E2E  
+Convert to Electron-Forge --template
