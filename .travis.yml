@@ -25,12 +25,9 @@ test_script:
 - npm test
 
 after_success:
-- if [ "$BRANCH" != "master" ]; then
+- if [ "$TRAVIS_BRANCH" != "master"]; then
   git clone "https://github.com/RCTechnologies/Seed.git" repo_temp;
   cd repo_temp;
-
-  echo ls;
-  ls;
 
   echo Mergin;
   git merge --ff-only origin/"$TRAVIS_BRANCH";
